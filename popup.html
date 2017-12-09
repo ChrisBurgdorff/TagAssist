@@ -1,0 +1,152 @@
+<html>
+	<head>
+		<style>
+			#internetExplorer, #chrome, #autoCorrect, #qualityControl {
+				display: none;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				background-color: #c3c3c3;
+				font-family: “Century Gothic”, CenturyGothic, AppleGothic, sans-serif;
+				text-align: center;
+			}
+			h1 {
+				padding: 12px;
+			}
+			button {
+				background-color: #00a0e6;
+				font-weight: bold;
+				color: white;
+				border-radius: 3px;
+				cursor: pointer;
+				padding: 6px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 4px;
+				margin-bottom: 4px;
+				width: 120px;
+			}
+			button:hover {
+				background-color: #00b2f8;
+			}
+			button:active {
+				background-color: #00c2ff;
+			}
+			#about {
+				margin-bottom: 12px;
+			}
+			.subMenu {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>TagAssist</h1>
+		<button id="shortcuts" class="menu">Shortcuts</button>
+		<button id="chromeButton" class="subMenu">Chrome</button>
+		<button id="ieButton" class="subMenu">Internet Explorer</button>
+		<button id="backButton" class="subMenu">Back</button>
+		<button id="AC" class="menu">AutoCorrect</button>
+		<button id="QC" class="menu">Quality Control</button>
+		<button id="about" class="menu">About</button>
+		<div id="internetExplorer">
+			<ul>
+				<li>Ctrl + S or [enter]: Click the Submit Button</li>
+				<li>Ctrl + N: Click the New Image Button</li>
+				<li>Ctrl + I: Set Payor Type to Insurance Carrier</li>
+				<li>Ctrl + T: Set Cursor in top text box (Payor for Insurance Carrier Checks</li>
+				<li>Ctrl + E: Set Cursor in Endorsement Bank Name textbox (or Signature 1, this is the "jump" key)</li>
+				<li>Ctrl + G: Zoom In</li>
+				<li>Ctrl + H: Zoom Out</li>
+				<li>Ctrl + R: Rotate</li>
+			</ul>
+			<ul>
+				<li>Ctrl + [number]: Zoom (When there are two images on a page)</li>
+				<li>1: Zoom to Upper Left</li>
+				<li>2: Move View to Right</li>
+				<li>3: Zoom to Bottom Left</li>
+				<li>4: Move View to Right</li>
+			</ul>
+			<ul>
+				<li>Ctrl + 5: Fill in Total Deposit Amount in Deposit Checks (pulled from last Deposit Slip)</li>
+			</ul>
+			<ul>
+				<li>Ctrl + [number]: Select Payor Type</li>
+				<li>7: Personal</li>
+				<li>8: Provider</li>
+				<li>9: Other</li>
+			</ul>
+			<ul>
+				<li>Ctrl + [arrow]</li>
+				<li>Up: Paste last record entered</li>
+				<li>Down: Paste half of last record entered (back of check for Deposits, front of checks for Checks Out)</li>
+				<li>Left/Right: Cycle through template options</li>
+			</ul>
+			<ul>
+				<li>[backspace] and Ctrl+W default behavior prevented</li>
+			</ul>
+		</div>
+		<div id="chrome">
+			<ul>
+				<li>Ctrl + S or [enter]: Click the Submit Button</li>
+				<li>Ctrl + B: Click the New Image Button</li>
+				<li>Ctrl + I: Set Payor Type to Insurance Carrier</li>
+				<li>Ctrl + Q: Set Cursor in top text box (Payor for Insurance Carrier Checks</li>
+				<li>Ctrl + E: Set Cursor in Endorsement Bank Name textbox (or Signature 1, this is the "jump" key)</li>
+				<li>Ctrl + G: Zoom In</li>
+				<li>Ctrl + H: Zoom Out</li>
+				<li>Ctrl + Y: Rotate</li>
+			</ul>
+			<ul>
+				<li>Ctrl + [number]: Zoom (When there are two images on a page)</li>
+				<li>1: Zoom to Upper Left</li>
+				<li>2: Move View to Right</li>
+				<li>3: Zoom to Bottom Left</li>
+				<li>4: Move View to Right</li>
+			</ul>
+			<ul>
+				<li>Ctrl + 5: Fill in Total Deposit Amount in Deposit Checks (pulled from last Deposit Slip)</li>
+			</ul>
+			<ul>
+				<li>Ctrl + [number]: Select Payor Type</li>
+				<li>7: Personal</li>
+				<li>8: Provider</li>
+				<li>9: Other</li>
+			</ul>
+			<ul>
+				<li>Ctrl + [arrow]</li>
+				<li>Up: Paste last record entered</li>
+				<li>Down: Paste half of last record entered (back of check for Deposits, front of checks for Checks Out)</li>
+				<li>Left/Right: Cycle through template options</li>
+			</ul>
+			<ul>
+				<li>[backspace] default behavior prevented</li>
+			</ul>
+		</div>
+		<div id="autoCorrect">
+			<ul>
+				<li>Proper Capitalization: Capitalizes the first letter of every word (except for words like "of", "a", etc.) <i>automatically.</i></li>
+				<li>Disable this feature by starting a field with an apostrophe (').</li>
+				<li>Punctuation: <i>TagAssist</i> will automatically remove any punctuation put into Tag (except decimals in dollar amounts).</li>
+			</ul>
+		</div>
+		<div id="qualityControl">
+			<ul>
+				<li>Ensures dates are valid.  User will get alert if date is earlier than 1980, later than the present day, or invalid number of months/days (for example, March 32)</li>
+				<li>Ensures dates make sense.  User will get an alert if the Doc Date is later than the Deposit Date, etc.</li>
+				<li>Check Payor Type.  If the user types a Payor that is on our Payor Types list, she will get an alert if she selected the incorrect Payor Type.</li>
+				<li>Check ABA / Routing Number.  User will get an alert if the Endorsement Bank Account Number or the Payor Account Number is on our list of bank ABA / Routing numbers.</li>
+				<li>Ensure Deposit Date matches the Deposit Date from Deposit Slip</li>
+				<li>Ensure Total Deposit Amount</li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<script language='javascript' src='jquery.js'></script>
+		<script language='javascript' src='popup.js'></script>
+	</body>
+</html>

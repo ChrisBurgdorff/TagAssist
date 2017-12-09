@@ -1,0 +1,16 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Tag Assist",
+	"version": "1.0",
+	"description": "Extension for Tag",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [ {
+		"matches": ["http://t.exhaonline.com/Template*", "https://t.exhaonline.com/Template*"],
+		"js": ["jquery.js", "tagassist.js"]
+	}]
+}
